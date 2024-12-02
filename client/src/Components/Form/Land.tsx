@@ -13,35 +13,43 @@ export default function Land({ updateGolani,updateHiluch,updateShirion,updateTot
     <div className='land'>
       <div className='block'>
         <p>גולני</p>
-        {[1,2,3,4].map((value) => (
-          <button  onClick={() => updateGolani(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2,3,4].map((value) => (
+              <button key={value}  onClick={() => updateGolani(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>שריון</p>
-        {[1,2,3,4].map((value) => (
-          <button key={value} onClick={() => updateShirion(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2,3,4].map((value) => (
+              <button key={value} onClick={() => updateShirion(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>תותחנים</p>
-        {[1,2, 3,4].map((value) => (
-          <button key={value} onClick={() => updateTothanom(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2, 3,4].map((value) => (
+              <button key={value} onClick={() => updateTothanom(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>חילוץ והצלה</p>
-        {[1,2, 3,4].map((value) => (
-          <button key={value} onClick={() => updateHiluch(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2, 3,4].map((value) => (
+              <button key={value} onClick={() => updateHiluch(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
     </div>
     );

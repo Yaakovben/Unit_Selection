@@ -18,7 +18,7 @@ export default function Form() {
     const [Data,setData]= useState(-1)
     const [devops,setDevops]= useState(-1)
     const [toran,setToran]= useState(-1)
-    const [text,setTest]= useState("")
+    const [text,setText]= useState("")
 
 
     const fetchAddSelection = async()=>{
@@ -47,6 +47,9 @@ export default function Form() {
             }
             const res: Response = await fetch(`http://localhost:8200/api/selection/add`, {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', 
+                },
                 body: JSON.stringify(body)
             });
             if (!res.ok) {
@@ -66,7 +69,7 @@ export default function Form() {
         </div>
         <Guidance/>
         <div className='block-form'>
-            <h1>רצון לשרת כלוחם בזרוע היבשה</h1>
+            <h1 className='title-block'>רצון לשרת כלוחם בזרוע היבשה</h1>
             <Land updateGolani={setGolani}updateShirion={setShirion} updateTothanom={setTothanom} updateHiluch={setHiluch}/>
         </div>
         <div className='block-form'>
@@ -78,7 +81,7 @@ export default function Form() {
             <Kodkod updateFullstack={setFullstack} updateData={setData} updateDevops={setDevops} updatetoran={setToran}/>
         </div>
             <h1>הערות אישיות</h1>
-            <input className='input-text'></input>
+            <input type='text' onChange={(e)=>{setText(e.target.value)}} className='input-text'></input>
         
         
         <button onClick={()=>{fetchAddSelection()}}>שלח טופס</button>

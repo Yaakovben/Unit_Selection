@@ -13,35 +13,43 @@ export default function Kodkod({updateFullstack,updateData,updateDevops,updateto
     <div className='land'>
       <div className='block'>
         <p>מפתח פולסטאק</p>
-        {[1,2,3,4].map((value) => (
-          <button  onClick={() => updateFullstack(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2,3,4].map((value) => (
+              <button  onClick={() => updateFullstack(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>מפתח דאטא</p>
-        {[1,2,3,4].map((value) => (
-          <button key={value} onClick={() => updateData(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2,3,4].map((value) => (
+              <button key={value} onClick={() => updateData(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>מפתח דבאופס</p>
-        {[1,2, 3,4].map((value) => (
-          <button key={value} onClick={() => updateDevops(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2, 3,4].map((value) => (
+              <button key={value} onClick={() => updateDevops(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>תורן</p>
-        {[1,2, 3,4].map((value) => (
-          <button key={value} onClick={() => updatetoran(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2, 3,4].map((value) => (
+              <button key={value} onClick={() => updatetoran(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
     </div>
     );

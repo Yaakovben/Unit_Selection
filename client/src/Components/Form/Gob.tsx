@@ -13,35 +13,43 @@ export default function Gob({ updateMamterot,updateRsar,updateTabach,updateMekar
     <div className='land'>
       <div className='block'>
         <p>מש"ק ממטרות</p>
-        {[1,2,3,4].map((value) => (
-          <button  onClick={() => updateMamterot(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2,3,4].map((value) => (
+              <button  onClick={() => updateMamterot(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>רס"ר בנימרודי</p>
-        {[1,2,3,4].map((value) => (
-          <button key={value} onClick={() => updateRsar(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2,3,4].map((value) => (
+              <button key={value} onClick={() => updateRsar(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p>טבח</p>
-        {[1,2, 3,4].map((value) => (
-          <button key={value} onClick={() => updateTabach(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2, 3,4].map((value) => (
+              <button key={value} onClick={() => updateTabach(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
       <div className='block'>
         <p> ממלא מקרר בסנדויצ'ים</p>
-        {[1,2, 3,4].map((value) => (
-          <button key={value} onClick={() => updateMekarer(value)}>
-            {value}
-          </button>
-        ))}
+        <div className='button-selection'>
+            {[1,2, 3,4].map((value) => (
+              <button key={value} onClick={() => updateMekarer(value)}>
+                {value}
+              </button>
+            ))}
+        </div>
       </div>
     </div>
     );
